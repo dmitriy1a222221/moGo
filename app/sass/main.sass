@@ -1,0 +1,571 @@
+
+
+/*...........common_styles.......*/
+.common__wrapp
+	width: 100%
+
+.common__wrapp_next-block
+	width: 100%
+	max-width: 63.754550182007280291211648465939%
+	margin: 0 auto
+
+.text-bold
+	font-weight: bold
+	font-size: 1.5em
+
+.suptitle
+	font-family: 'KaushanScriptRegular', sans-serif
+	font-size: 1.5em
+	color: #333333
+	text-align: center
+
+.title
+	font-family: 'montserrat_bold', sans-serif
+	font-size: 1.875em
+	color: #333333
+	text-transform: uppercase
+	text-align: center
+	margin-bottom: 70px
+
+.red-line
+	display: block
+	width: 60px
+	height: 3px
+	background-color: #f38181
+
+/*...........end_common_styles.......*/
+
+/*.......header...........*/
+.wrap-header
+	background: url("../img/bg_header.png") center center no-repeat
+	background-size: cover
+	overflow: hidden
+
+
+.header
+	width: 100%
+	max-width: 63.754550182007280291211648465939%
+	margin: 0 auto
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	
+.header__top-block
+	width: 100%
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 35px 0
+	margin-bottom: 160px
+
+.logo
+	color: #FFFFFF
+	font-family: 'montserrat_bold', sans-serif
+	font-weight: bold
+	font-size: 1.875em
+
+.burger
+	width: 30px
+	display: none
+	cursor: pointer
+	.burger__line
+		width: 100%
+		height: 3px
+		background-color: #FFFFFF
+
+		&:nth-child(2)
+			margin: 5px 0
+
+.nav__list
+	width: 50.897226753670473083197389885808%
+	display: flex
+	justify-content: space-between
+	
+	li
+		position: relative
+		padding-left: 20px
+		transition: after .1s
+		a
+			color: #FFFFFF
+			font-family: 'montserrat_regular', sans-serif
+			font-size: 0.875em
+			transition: color .2s
+
+		.nav-line
+			visibility: hidden
+			width: 0
+			height: 3px
+			background-color: #fce38a
+			margin-top: 10px
+			transition: visibility, width .4s
+
+		&:hover
+			a
+				color: #fce38a
+
+			.nav-line
+				visibility: visible
+				width: 100%
+
+.header__center-block
+	width: 100%
+	display: flex
+	flex-direction: column
+	justify-content: flex-start
+	align-items: center
+
+.header__suptitle
+	font-family: 'KaushanScriptRegular', sans-serif
+	font-size: 4.5em
+	color: #FFFFFF
+	margin-bottom: 20px
+
+.header__title
+	font-family: 'montserrat_bold', sans-serif
+	font-size: 9.375em
+	line-height: 140px
+	color: #FFFFFF
+	text-transform: uppercase
+	margin-bottom: 70px
+	text-align: center
+
+.header__line
+	display: block
+	width: 60px
+	height: 3px
+	background-color: #FFFFFF
+	margin-bottom: 50px
+
+.header__button
+	width: 160px
+	height: 40px
+	border: 3px solid #FFFFFF
+	background-color: rgba(255, 255, 255, 0)
+	padding: 10px 26px
+	color: #FFFFFF
+	font-family: 'montserrat_bold', sans-serif
+	font-size: 0.875em
+	text-transform: uppercase
+	cursor: pointer
+	margin-bottom: 150px
+
+	&:hover
+		opacity: .8
+
+	&:active
+		opacity: .5
+
+.header__bottom-block
+	width: 100%
+	display: flex
+	justify-content: space-between
+	padding-bottom: 25px
+
+.header__item
+	width: 22.756933115823817292006525285481%
+
+	&_1
+		&:hover
+			.filling
+				height: 100%
+				width: 25%
+				background-color: #f38181
+
+	&_2
+		&:hover
+			.filling
+				height: 100%
+				width: 56%
+				background-color: #f38181
+
+	&_3
+		&:hover
+			.filling
+				height: 100%
+				width: 35%
+				background-color: #f38181
+
+	&_4
+		&:hover
+			.filling
+				height: 100%
+				width: 75%
+				background-color: #f38181
+
+	&:hover
+		p
+			opacity: 1
+
+		.line
+			opacity: 1
+
+
+	.line
+		width: 100%
+		height: 3px
+		background-color: #FFFFFF
+		opacity: .5
+		margin-bottom: 25px
+
+	.filling
+		width: 0
+		transition: width .5s
+
+	p
+		font-family: 'montserrat_regular', sans-serif
+		font-size: 0.875em
+		color: #FFFFFF
+		text-transform: uppercase
+		opacity: .8
+/*.......end_header...........*/
+/*.......about_us...........*/
+.wrap-about-us
+	padding: 85px 0 110px
+.about-us
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	align-items: center
+
+.about-us__titles
+	display: flex
+	flex-direction: column
+	justify-content: flex-start
+	align-items: center
+
+.about-us__suptitle
+	margin-bottom: 5px
+
+.about-us__title
+	margin-bottom: 35px
+
+.about-us__line
+	width: 60px
+	height: 3px
+	background-color: #f38181
+	margin-bottom: 35px
+
+.about-us__description
+	text-align: center
+	font-family: 'MerriweatherRegular', sans-serif
+	font-size: 0.9375em
+	color: #999999
+	margin-bottom: 65px
+
+.about-us__work
+	width: 100%
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-wrap: wrap
+
+.about-us__item
+	width: 30.831973898858075040783034257749%
+	min-width: 265px
+	height: 250px
+	cursor: pointer
+	transition: all .4s
+	margin-top: 25px
+
+	&:nth-child(2)
+		margin-left: 25px
+		margin-right: 25px
+
+	&:hover
+		box-shadow: 10px 10px 0 0 #95e1d3
+		transform: translate(-10px, -10px) !important
+		.item_bg-hover
+			display: flex
+
+	&_1
+		background: url("../img/bg_story-1.png") no-repeat
+
+	&_2
+		background: url("../img/bg_story-2.png") no-repeat
+
+	&_3
+		background: url("../img/bg_story-3.png") no-repeat
+
+.item_bg-hover
+	width: 100%
+	height: 100%
+	background: linear-gradient( 180deg, #db7574 9%, #e3cc7c 100%)
+	display: none
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	opacity: .9
+
+	.item-icon_bg-hover
+		margin-bottom: 5px
+
+	.item_bg-hover_subtitle
+		font-family: 'montserrat_bold', sans-serif
+		font-size: 1.125em
+		color: #FFFFFF
+		text-transform: uppercase
+
+
+/*.......end_about_us...........*/
+/*..........facts............*/
+.wrap-facts
+	padding: 45px 0 70px
+	background-color: #95e1d3
+
+.facts
+	display: flex
+	justify-content: center
+	align-items: flex-start
+	flex-wrap: wrap
+
+.facts__item
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	width: 164px
+	margin-top: 25px
+
+.fact__item-num
+	font-family: 'montserrat_bold', sans-serif
+	font-weight: bold
+	font-size: 4.5em
+	color: #FFFFFF
+	text-align: center
+
+.fact__item-description
+	font-family: 'montserrat_regular', sans-serif
+	color: #FFFFFF
+	font-size: 0.875em
+	text-transform: uppercase
+	text-align: center
+/*..........end_facts............*/
+/*............service...........*/
+.wrap-service
+	padding: 90px 0 110px
+
+.service
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	align-items: center
+
+.service__titles
+	display: flex
+	flex-direction: column
+	align-items: center
+
+	.service__suptitle
+		margin-bottom: 5px
+
+	.service__line
+		margin-bottom: 25px
+
+.wrapp-service__items
+	width: 100%
+	display: flex
+	flex-direction: column
+
+.service__items
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+
+	&:nth-child(2)
+		margin: 0 3%
+
+	&_top
+		margin-bottom: 45px
+
+	&_line
+		width: 100%
+		height: 1px
+		background-color: #e5e5e5
+		margin-bottom: 20px
+
+.service-item
+	display: flex
+	justify-content: flex-start
+	margin-top: 25px
+
+	&__icon
+		margin-right: 23px
+		width: 30px
+		height: 30px
+
+	&__title
+		font-family: 'montserrat_regular', sans-serif
+		font-size: 0.875em
+		color: #333333
+		text-transform: uppercase
+		margin-bottom: 10px
+
+	&__description
+		font-family: 'roboto_light', sans-serif
+		font-size: 0.9375em
+		color: #bdbdbd
+		width: 100%
+		max-width: 250px
+
+/*............end_service...........*/
+/*..........feature............*/
+.wrap-feature
+	padding-top: 100px
+	background: url("../img/bg_feature.png") center center no-repeat
+	background-size: cover
+
+.feature
+	display: flex
+	flex-direction: column
+	align-items: center
+
+.features__titles
+	display: flex
+	flex-direction: column
+	align-items: center
+
+
+	.features__line
+		margin-bottom: 45px
+
+.feature__tehno
+	position: relative
+
+	&_ipad
+		width: 100%
+		max-width: 475px
+		height: auto
+		max-height: 580px
+		margin-bottom: -4px
+
+	&_iphone
+		position: absolute
+		right: -115px
+		bottom: -50px
+		width: 100%
+		max-width: 200px
+		height: auto
+		max-height: 435px
+/*..........end_feature............*/
+/*.............service2..............*/
+.wrap-service2
+	padding: 105px 0 115px
+	background-color: #FFFFFF
+
+.service2
+	display: flex
+	flex-direction: column
+
+	&__description
+		font-family: 'roboto_light', sans-serif
+		font-size: 0.9375em
+		color: #b6b6b6
+		text-align: center
+		margin-bottom: 90px
+
+.service2__titles
+	display: flex
+	flex-direction: column
+	align-items: center
+
+	&_title
+		text-align: center
+	&_suptitle
+		text-align: center
+	&_line
+		margin-bottom: 20px
+
+.our-talk
+	width: 100%
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+
+	&__img
+		background: url("../img/servce_img.png") center center no-repeat
+		background-size: cover
+		width: 46.492659053833605220228384991843%
+		min-width: 320px
+		height: 380px
+		margin-top: 25px
+		margin-right: 25px
+/*........our-talk...................*/
+.our-talk__wrapp-item
+	margin-top: 25px
+	//width: 48.939641109298531810766721044046%
+	width: 100%
+	max-width: 400px
+	//min-width: 320px
+	height: 380px
+
+.our-talk__item
+	width: 100%
+	cursor: pointer
+
+	//&:hover
+	//	.our-talk__description-text
+	//		display: block
+	//		transform: translateY(0)
+	//
+	//	.our-talk__item_arrow
+	//		transform: rotate(180deg)
+
+	&:nth-child(2)
+		margin: 10px 0
+
+.our-talk__item-head
+	display: flex
+	justify-content: space-between
+	align-items: center
+	width: 100%
+	padding: 9px 12px
+	border: 1px solid #e5e5e5
+
+.our-talk__item_named
+	display: flex
+	justify-content: flex-start
+	align-items: center
+
+
+.our-talk__item_img
+	margin-right: 10px
+
+.our-talk__item_title
+	font-family: 'montserrat_regular', sans-serif
+	font-size: 0.875em
+	color: #333333
+	text-transform: uppercase
+
+.our-talk__item_arrow
+	width: 22px
+	height: 12px
+	transition: all .3s ease-in-out
+
+.our-talk__description-text
+	display: none
+	width: 100%
+	padding: 15px
+	border: 1px solid #e5e5e5
+	border-top: none
+	transition: height .5s
+
+
+.our-talk__text-about
+	overflow: auto
+	height: 130px
+	font-family: 'roboto_light',  sans-serif
+	font-style: italic
+	font-size: 0.9375em
+	color: #b6b6b6
+	padding-right: 20px
+
+	&::-webkit-scrollbar
+		width: 5px
+	&::-webkit-scrollbar-thumb
+		background: #95e1d3
+		border-radius: 300px
+	&::-webkit-scrollbar-track
+		background-color: #f5f5f5
+		border-radius: 300px
+/*........end_our-talk...................*/
+/*.............end_service2..........*/
