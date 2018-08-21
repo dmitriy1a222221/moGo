@@ -204,12 +204,32 @@ div[class*='slider-item']
 	display: none
 	cursor: pointer
 	.burger__line
-		width: 100%
-		height: 3px
-		background-color: #FFFFFF
+        width: 100%
+        height: 3px
+        background-color: #FFFFFF
+        transition: all .3s
+        &:nth-child(1)
+            transform: rotate(0)
+        &:nth-child(2)
+            margin: 5px 0
+        &:nth-child(3)
+            transform: rotate(0)
 
-		&:nth-child(2)
-			margin: 5px 0
+.burger.active
+    position: fixed
+    z-index: 10
+    right: 20px
+    .burger__line
+        position: absolute
+
+        &:nth-child(1)
+            transform: rotate(45deg)
+        &:nth-child(2)
+            display: none
+        &:nth-child(3)
+            top: 0
+            left: 0
+            transform: rotate(-45deg)
 
 .nav__list
 	width: 50.897226753670473083197389885808%
@@ -241,6 +261,43 @@ div[class*='slider-item']
 			.nav-line
 				visibility: visible
 				width: 100%
+
+.nav__list.active
+    padding-top: 20%
+    position: fixed
+    top: 0
+    right: 0
+    width: 250px
+    height: 100vh
+    display: flex
+    background-color: rgba(0, 0, 0, .6)
+    flex-direction: column
+    justify-content: flex-start
+    z-index: 9
+
+    li
+        position: relative
+        a
+            color: #FFFFFF
+            font-family: 'montserrat_regular', sans-serif
+            font-size: 0.875em
+            transition: color .2s
+
+        .nav-line
+            visibility: hidden
+            width: 0
+            height: 3px
+            background-color: #fce38a
+            margin-top: 10px
+            transition: visibility, width .4s
+
+        &:hover
+            a
+                color: #fce38a
+
+            .nav-line
+                visibility: visible
+                width: 50%
 
 .header__center-block
 	width: 100%
@@ -384,6 +441,11 @@ div[class*='slider-item']
 	align-items: center
 	flex-wrap: wrap
 
+.about-us__contain
+    &:nth-child(2)
+        margin-left: 25px
+        margin-right: 25px
+
 .about-us__item
 	width: 30.831973898858075040783034257749%
 	min-width: 265px
@@ -391,10 +453,6 @@ div[class*='slider-item']
 	cursor: pointer
 	transition: all .4s
 	margin-top: 25px
-
-	&:nth-child(2)
-		margin-left: 25px
-		margin-right: 25px
 
 	&:hover
 		box-shadow: 10px 10px 0 0 #95e1d3
@@ -597,13 +655,15 @@ div[class*='slider-item']
 		margin-right: 25px
 /*........our-talk...................*/
 .our-talk__wrapp-item
-
-	margin-top: 25px
-	width: 48.939641109298531810766721044046%
-	//width: 100%
-	max-width: 400px
-	min-width: 320px
-	height: 380px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    margin-top: 25px
+    width: 48.939641109298531810766721044046%
+    //width: 100%
+    max-width: 400px
+    min-width: 320px
+    height: 380px
 
 
 .our-talk__item

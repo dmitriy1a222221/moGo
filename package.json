@@ -23,6 +23,7 @@
     "imagemin-pngquant": "^5.1.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.2.0"
+    "@fortawesome/fontawesome-free": "^5.2.0",
+    "wowjs": "^1.1.3"
   }
 }

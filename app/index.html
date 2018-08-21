@@ -13,7 +13,8 @@
 	<link rel="stylesheet" href="css/animation.css">
 	<!--<link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css" crossorigin="anonymous">-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-	<script src="js/wow.js" defer></script>
+	<script src="js/wow.min.js" defer></script>
+	<script src="js/scrolling.js" defer></script>
 	<script src="js/main.js" defer></script>
 </head>
 <body>
@@ -31,30 +32,30 @@
 					</div>
 					<ul class="nav__list">
 						<li class="nav__item1 nav__item_common animated fadeInDown wow" data-wow-delay="1.2s">
-							<a href="#">About</a>
+							<a class="nav__link" href="#about">About</a>
 							<div class="nav-line"></div>
 						</li>
 						<li class="nav__item2 nav__item_common animated fadeInDown wow" data-wow-delay="1s">
-							<a href="#">Service</a>
+							<a class="nav__link" href="#service">Service</a>
 							<div class="nav-line"></div>
 						</li>
 						<li class="nav__item3 nav__item_common animated fadeInDown wow" data-wow-delay=".8s">
-							<a href="#">Work</a>
+							<a class="nav__link" href="#work">Work</a>
 							<div class="nav-line"></div>
 						</li>
 						<li class="nav__item4 nav__item_common animated fadeInDown wow" data-wow-delay=".6s">
-							<a href="#">Blog</a>
+							<a class="nav__link" href="#blog">Blog</a>
 							<div class="nav-line"></div>
 						</li>
 						<li class="nav__item5 nav__item_common animated fadeInDown wow" data-wow-delay=".4s">
-							<a href="#">Contact</a>
+							<a class="nav__link" href="#contact">Contact</a>
 							<div class="nav-line"></div>
 						</li>
 						<li class="nav__item6 nav__item_common animated fadeInDown wow" data-wow-delay=".2s">
-							<a href="#"><i class="fas fa-shopping-cart"></i></a>
+							<a class="nav__link" href="#"><i class="fas fa-shopping-cart"></i></a>
 						</li>
 						<li class="nav__item7 nav__item_common animated fadeInDown wow" data-wow-delay="0">
-							<a href="#"><i class="fas fa-search"></i></a>
+							<a class="nav__link" href="#"><i class="fas fa-search"></i></a>
 						</li>
 					</ul>
 				</nav>
@@ -98,7 +99,7 @@
 			</div>
 		</div>
 	</header>
-	<div class="wrap-about-us common__wrapp">
+	<div id="about" class="wrap-about-us common__wrapp">
 		<div class="about-us common__wrapp_next-block">
 			<div class="about-us__titles common-titles">
 				<h2 class="suptitle about-us__suptitle animated wow fadeInLeft">What we do</h2>
@@ -113,22 +114,28 @@
 				ut aliquip ex ea commodo consequat.
 			</p>
 			<div class="about-us__work">
-				<div class="about-us__item about-us__item_1 " data-wow-delay=".3s">
-					<div class="item_bg-hover">
-						<img src="img/icon_story-hover.png" alt="icon_team" class="item-icon_bg-hover">
-						<h3 class="item_bg-hover_subtitle">Super Team</h3>
+				<div class="about-us__contain animated wow fadeInLeft" data-wow-delay=".3s">
+					<div class="about-us__item about-us__item_1 ">
+						<div class="item_bg-hover">
+							<img src="img/icon_story-hover.png" alt="icon_team" class="item-icon_bg-hover">
+							<h3 class="item_bg-hover_subtitle">Super Team</h3>
+						</div>
 					</div>
 				</div>
-				<div class="about-us__item about-us__item_2 " data-wow-delay=".2s">
-					<div class="item_bg-hover">
-						<img src="img/icon_story-hover.png" alt="icon_team" class="item-icon_bg-hover">
-						<h3 class="item_bg-hover_subtitle">Super Team</h3>
+				<div class="about-us__contain animated wow fadeInLeft" data-wow-delay=".2s">
+					<div class="about-us__item about-us__item_2 ">
+						<div class="item_bg-hover">
+							<img src="img/icon_story-hover.png" alt="icon_team" class="item-icon_bg-hover">
+							<h3 class="item_bg-hover_subtitle">Super Team</h3>
+						</div>
 					</div>
 				</div>
-				<div class="about-us__item about-us__item_3 " data-wow-delay=".1s">
-					<div class="item_bg-hover">
-						<img src="img/icon_story-hover.png" alt="icon_team" class="item-icon_bg-hover">
-						<h3 class="item_bg-hover_subtitle">Super Team</h3>
+				<div class="about-us__contain animated wow fadeInLeft" data-wow-delay=".1s">
+					<div class="about-us__item about-us__item_3 ">
+						<div class="item_bg-hover">
+							<img src="img/icon_story-hover.png" alt="icon_team" class="item-icon_bg-hover">
+							<h3 class="item_bg-hover_subtitle">Super Team</h3>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -158,7 +165,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="wrap-service common__wrapp">
+	<div id="service" class="wrap-service common__wrapp">
 		<div class="service common__wrapp_next-block">
 			<div class="service__titles common-titles">
 				<h3 class="service__suptitle suptitle animated wow fadeInLeft">We work with</h3>
@@ -259,8 +266,8 @@
 				ut aliquip ex ea commodo consequat.
 			</p>
 			<div class="our-talk">
-				<div class="our-talk__img"></div>
-				<div class="our-talk__wrapp-item">
+				<div class="our-talk__img animated wow fadeInLeft"></div>
+				<div class="our-talk__wrapp-item animated wow fadeInRight100">
 					<div class="our-talk__item active">
 						<div class="our-talk__item-head">
 							<div class="our-talk__item_named">
@@ -541,7 +548,7 @@
 			<img class="animated wow fadeInRight100" data-wow-delay=".1s" src="img/brand-icon-6.png" alt="brands">
 		</div>
 	</div>
-	<div class="wrap-work common__wrapp">
+	<div id="work" class="wrap-work common__wrapp">
 		<div class="work common__wrapp_next-block">
 			<div class="work__titles common-titles">
 				<h2 class="suptitle work__titles_suptitle animated wow fadeInLeft">Who we are</h2>
@@ -781,7 +788,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="wrap-blog common__wrapp">
+	<div id="blog" class="wrap-blog common__wrapp">
 		<div class="blog common__wrapp_next-block">
 			<div class="blog__titles common-titles">
 				<h2 class="suptitle blog__titles_suptitle animated wow fadeInLeft">Our Stories</h2>
@@ -789,7 +796,7 @@
 				<div class="blog__titles_line red-line"></div>
 			</div>
 			<div class="blog__wrap-item">
-				<div class="blog__item">
+				<div class="blog__item animated wow fadeInLeft" data-wow-delay=".1s">
 					<div class="blog__item-img blog__item-img_1">
 						<div class="blog__block-data">
 							<h2 class="data-num">15</h2>
@@ -816,7 +823,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="blog__item">
+				<div class="blog__item animated wow fadeInLeft" data-wow-delay=".3s">
 					<div class="blog__item-img blog__item-img_2">
 						<div class="blog__block-data">
 							<h2 class="data-num">14</h2>
@@ -842,7 +849,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="blog__item">
+				<div class="blog__item animated wow fadeInLeft" data-wow-delay=".6s">
 					<div class="blog__item-img blog__item-img_3">
 						<div class="blog__block-data">
 							<h2 class="data-num">12</h2>
@@ -879,10 +886,10 @@
 			<div class="map__line"></div>
 		</div>
 	</div>
-	<footer class="wrap-footer common__wrapp">
+	<footer id="contact" class="wrap-footer common__wrapp">
 		<div class="footer common__wrapp_next-block">
 			<div class="footer__items-wrap">
-				<div class="footer__mogo-wrap">
+				<div class="footer__mogo-wrap animated wow fadeInLeft" data-wow-delay=".1s">
 					<h2 class="footer-mogo__logo">MoGo</h2>
 					<h5 class="footer-mogo__description">
 						Lorem ipsum dolor sit amet,
@@ -909,7 +916,7 @@
 						<button type="submit" class="footer-btn">Subscribe</button>
 					</form>
 				</div>
-				<div class="footer__blogs-wrap">
+				<div class="footer__blogs-wrap animated wow fadeInLeft" data-wow-delay=".4s">
 					<h2 class="footer__blogs-logo">Blogs</h2>
 					<div class="footer__blogs-item-wrap">
 						<div class="footer__blogs-item">
@@ -950,7 +957,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="footer__inst-wrap">
+				<div class="footer__inst-wrap animated wow fadeInLeft" data-wow-delay=".8s">
 					<h2 class="footer-inst__logo">Instagram</h2>
 					<div class="footer-inst__wrap-icon">
 						<div class="footer-inst__part footer-inst__part_1">
