@@ -45,6 +45,129 @@
 	color: #b6b6b6
 	text-align: center
 
+/*slider*/
+.wrap-slider
+	margin-top: 120px
+	background-color: #f8f8f8
+
+.slider
+	padding: 65px 105px
+	position: relative
+
+.slider-work
+    padding-bottom: 0
+
+div[class*='arrow-prev__wrap']
+    position: absolute
+    top: 45%
+    left: 0
+    width: 15px
+    height: 20px
+    cursor: pointer
+
+    .arrow-prev
+        position: absolute
+        top: 45%
+        left: 0
+        width: 10px
+        height: 2px
+        background-color: #cccccc
+        transform: rotate(-45deg)
+
+        &:after
+            content: ''
+            display: inline
+            position: absolute
+            top: 4px
+            left: -5px
+            width: 10px
+            height: 2px
+            background-color: #cccccc
+            transform: rotate(90deg)
+
+div[class*='arrow-next__wrap']
+    position: absolute
+    top: 45%
+    right: 0
+    width: 15px
+    height: 20px
+    cursor: pointer
+
+    .arrow-next
+        position: absolute
+        top: 45%
+        right: 0
+        width: 10px
+        height: 2px
+        background-color: #cccccc
+        transform: rotate(45deg)
+
+        &:after
+            content: ''
+            display: inline
+            position: absolute
+            top: 4px
+            right: -5px
+            width: 10px
+            height: 2px
+            background-color: #cccccc
+            transform: rotate(90deg)
+
+.slider-overflow
+	overflow-x: hidden
+	width: 100%
+
+div[class*='slider-wrap-item']
+	display: flex
+	transition: all .4s
+
+div[class*='slider-item']
+	display: flex
+	justify-content: flex-start
+	align-items: center
+
+.slider__img-block
+	padding: 45px
+	border: 2px solid #95e1d3
+	margin-right: 50px
+	margin-bottom: 25px
+
+	img
+		width: 65px
+		height: 65px
+
+.slider__img-block-work
+    width: 210px
+    height: 210px
+    background: url("../img/icon-comment_work.png") center center no-repeat
+    background-size: contain
+    margin-right: 50px
+    margin-bottom: 25px
+
+.slider__direction
+	font: 1.5em 'roboto_light', sans-serif
+	font-style: italic
+	color: #a0a0a0
+	margin-bottom: 20px
+	width: 100%
+	max-width: 764px
+
+.slider__text-line
+	display: flex
+	justify-content: flex-start
+	align-items: center
+
+.slider-line
+	width: 60px
+	height: 3px
+	background-color: #f38181
+	margin-right: 10px
+
+.slider__text-name
+	font: 1.5em 'KaushanScriptRegular', sans-serif
+	color: #333333
+
+/*end_slider*/
 /*...........end_common_styles.......*/
 
 /*.......header...........*/
@@ -440,7 +563,7 @@
 /*..........end_feature............*/
 /*.............service2..............*/
 .wrap-service2
-	padding: 105px 0 115px
+	padding: 105px 0 0
 	background-color: #FFFFFF
 
 .service2
@@ -474,34 +597,34 @@
 		margin-right: 25px
 /*........our-talk...................*/
 .our-talk__wrapp-item
+
 	margin-top: 25px
-	//width: 48.939641109298531810766721044046%
-	width: 100%
+	width: 48.939641109298531810766721044046%
+	//width: 100%
 	max-width: 400px
-	//min-width: 320px
+	min-width: 320px
 	height: 380px
+
 
 .our-talk__item
 	width: 100%
 	cursor: pointer
 
-	//&:hover
-	//	.our-talk__description-text
-	//		display: block
-	//		transform: translateY(0)
-	//
-	//	.our-talk__item_arrow
-	//		transform: rotate(180deg)
+	//&:nth-child(2)
+	//	margin: 10px 0
 
-	&:nth-child(2)
-		margin: 10px 0
+.our-talk__item.active .our-talk__item_arrow
+    transform: rotate(180deg)
+
+.our-talk__item.active .our-talk__description-text
+    display: block
 
 .our-talk__item-head
 	display: flex
 	justify-content: space-between
 	align-items: center
 	width: 100%
-	padding: 9px 12px
+	padding: 14px 12px
 	border: 1px solid #e5e5e5
 
 .our-talk__item_named
@@ -523,6 +646,7 @@
 	width: 22px
 	height: 12px
 	transition: all .3s ease-in-out
+    //transform: rotate(0deg)
 
 .our-talk__description-text
 	display: none
@@ -764,3 +888,430 @@
 	font-style: italic
 	color: #FFFFFF
 /*........end_work..........*/
+/*......peoplesay...........*/
+.wrap-peoplesay
+	background: url("../img/bg-peopleSay.png") center center no-repeat
+	background-size: cover
+
+.peoplesay
+	padding: 100px 0 115px
+
+.peoplesay__titles_title
+	margin-bottom: 35px
+
+.peoplesay__titles_line
+	margin-bottom: 55px
+
+.wrapp-vidguki
+	width: 100%
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+
+.vdguki__left-part
+	width: 41.109298531810766721044045676998%
+	min-width: 320px
+
+.vdguki__right-part
+	width: 41.109298531810766721044045676998%
+	min-width: 320px
+
+.vidguki__item
+	width: 100%
+	display: flex
+
+	img
+		width: 110px
+		height: 110px
+		margin-right: 20px
+
+.viguki__item_1
+	margin-bottom: 55px
+
+.viguki__item_3
+	margin-bottom: 55px
+	
+.vikguki__title
+	font-family: 'montserrat_regular', sans-serif
+	font-size: 0.875em
+	color: #333333
+	text-transform: uppercase
+	margin-bottom: 8px
+
+.vikguki__direction
+	font-family: 'roboto_light', sans-serif
+	font-size: 0.9375em
+	color: #848484
+	font-style: italic
+	margin-bottom: 15px
+
+.vikguki__line
+	width: 60px
+	height: 3px
+	background-color: #f38181
+	margin-bottom: 25px
+
+.vikguki_description
+	font-family: 'roboto_bold', sans-serif
+	font-size: 0.9375em
+	font-weight: 400
+	color: #b3b3b3
+
+/*......end_peoplesay...........*/
+/*........blog............*/
+.wrap-blog
+	padding: 95px 0 100px
+
+.blog__titles_title
+	margin-bottom:  35px
+
+.blog__titles_line
+	margin-bottom: 15px
+
+.blog__wrap-item
+	width: 100%
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+
+.blog__item
+	width: 380px
+	min-width: 310px
+	margin-top: 30px
+
+	&:nth-child(2)
+		margin: 30px 30px 0
+
+.blog__item-img
+	position: relative
+	width: 100%
+	height: 240px
+	margin-bottom: 15px
+
+	&_1
+		background: url("../img/blog-item-bg-1.png") center center no-repeat
+		background-size: cover
+	&_2
+		background: url("../img/blog-item-bg-2.png") center center no-repeat
+		background-size: cover
+	&_3
+		background: url("../img/blog-item-bg-3.png") center center no-repeat
+		background-size: cover
+
+.blog__block-data
+	position: absolute
+	bottom: 10px
+	left: -10px
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	align-items: center
+	padding: 8px 9px
+	background-color: #95e1d3
+	width: 60px
+
+.data-num
+	font-family: 'roboto_light', sans-serif
+	font-size: 1.875em
+	font-weight: bold
+	color: #FFFFFF
+
+.data-mount
+	font-family: 'roboto_light', sans-serif
+	font-size: 0.9375em
+	font-style: italic
+	color: #FFFFFF
+
+.blog__item-title
+	font-family: 'montserrat_regular', sans-serif
+	font-size: 0.875em
+	text-transform: uppercase
+	color: #333333
+	margin-bottom: 17px
+
+.blog__item-subtitle
+	font-family: 'roboto_bold ', sans-serif
+	font-size: 0.9375em
+	line-height: 22px
+	font-weight: 400
+	color: #999999
+	margin-bottom: 20px
+
+.blog__item-line
+	width: 100%
+	height: 1px
+	background-color: #e5e5e5
+	margin-bottom: 15px
+	
+.blog__item-wrap-view
+	display: flex
+
+.blog__item-view
+	display: flex
+	align-items: center
+	margin-right: 15px
+
+	img
+		width: 20px
+		height: 12px
+		margin-right: 5px
+
+.blog__item-counter
+	font-family: 'roboto_light ', sans-serif
+	font-size: 0.9375em
+	font-style: italic
+	color: #b6b6b6
+
+.blog__item-comments
+	display: flex
+
+.blog__item-comments
+	display: flex
+	align-items: center
+	margin-right: 15px
+
+	img
+		width: 16px
+		height: 15px
+		margin-right: 5px
+
+.blog__item-counter
+	font-family: 'roboto_light ', sans-serif
+	font-size: 0.9375em
+	font-style: italic
+	color: #b6b6b6
+/*........end_blog............*/
+/*.........map...........*/
+.wrap-map
+	padding: 45px 0 55px
+	background: url("../img/map-bg.png") center center no-repeat
+	background-size: cover
+
+.map
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+
+.map__pin
+	width: 18px
+	height: 24px
+	margin-bottom: 15px
+
+.map__title
+	font-family: 'montserrat_bold', sans-serif
+	font-size: 1.5em
+	text-transform: uppercase
+	color: #f38181
+	margin-bottom: 18px
+	text-align: center
+
+.map__line
+	width: 60px
+	height: 3px
+	background-color: #f38181
+
+/*.........end_map...........*/
+/*........footer..........*/
+.wrap-footer
+	background-color: #f8f8f8
+	padding: 25px 0 20px
+
+.footer__items-wrap
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	padding-bottom: 70px
+	border-bottom: 1px solid #e5e5e5
+	margin-bottom: 15px
+/*..mogo..*/
+.footer__mogo-wrap
+	width: 38.336052202283849918433931484502%
+	min-width: 310px
+	margin-right: 43px
+	margin-top: 25px
+
+.footer-mogo__logo
+	font: 2.875em 'montserrat_bold', sans-serif
+	color: #cccccc
+	margin-bottom: 25px
+
+.footer-mogo__description
+	font: 0.9375em 'montserrat_regular', sans-serif
+	color: #b4b4b4
+	margin-bottom: 40px
+
+.footer-mogo__followers
+	font: 0.9375em 'montserrat_regular', sans-serif
+	color: #333333
+	margin-bottom: 15px
+
+	.bold
+		font-weight: bold
+		font-size: 1.25em
+
+.footer-mogo__line
+	width: 100%
+	height: 1px
+	background-color: #e5e5e5
+	margin-bottom: 13px
+
+.footer-mogo__social-wrap
+	width: 100%
+	margin-bottom: 15px
+
+.footer-mogo__social-wrap_text
+	font: 0.9375em 'roboto_light', sans-serif
+	color: #dddddd
+	font-style: italic
+
+.footer-form
+	display: flex
+	justify-content: flex-start
+	align-items: center
+
+.email
+	padding: 0 10px
+	height: 40px
+	border: 1px solid #e7e7e7
+	font: 0.9375em 'roboto_light', sans-serif
+	color: #d9d9d9
+	font-style: italic
+
+	&::placeholder
+		font: 0.9375em 'roboto_light', sans-serif
+		color: #d9d9d9
+		font-style: italic
+
+.footer-btn
+	padding: 0 10px
+	height: 40px
+	font: 0.9375em 'montserrat_bold', sans-serif
+	color: #FFFFFF
+	font-weight: bold
+	text-transform: uppercase
+	border: none
+	background-color: #95e1d3
+	cursor: pointer
+
+	&:hover
+		opacity: .7
+
+	&:active
+		opacity: .5
+
+/*..end_mogo..*/
+/*..blogs..*/
+.footer__blogs-wrap
+	width: 27.732463295269168026101141924959%
+	min-width: 310px
+	margin-right: 45px
+	margin-top: 25px
+
+.footer__blogs-logo
+	font: 0.875em 'montserrat_regular', sans-serif
+	color: #333333
+	text-transform: uppercase
+	margin-bottom: 40px
+
+.footer__blogs-item
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	margin-bottom: 30px
+
+	&:nth-child(3)
+		margin-bottom: 0
+
+	img
+		margin-right: 20px
+
+.footer__blogs-item_title
+	font: 0.875em 'montserrat_regular', sans-serif
+	color: #333333
+	text-transform: uppercase
+	margin-bottom: 7px
+
+.footer__blogs-item_data
+	font: 0.8125em 'roboto_light', sans-serif
+	color: #b4b4b4
+	font-style: italic
+
+/*..end_mogo..*/
+/*..inst..*/
+.footer__inst-wrap
+	width: 22.022838499184339314845024469821%
+	min-width: 310px
+	margin-top: 25px
+
+.footer-inst__logo
+	font: 0.875em 'montserrat_regular', sans-serif
+	color: #333333
+	text-transform: uppercase
+	margin-bottom: 40px
+
+.footer-inst__wrap-icon
+	margin-bottom: 15px
+	display: flex
+	flex-wrap: wrap
+
+.footer-inst__part
+	width: 88px
+	margin-right: 2px
+
+	&:last-child
+		margin-right: 0
+
+.footer-inst__icon
+	width: 100%
+	height: 88px
+	margin-bottom: 2px
+
+	&:hover
+		transform: skew(1)
+
+	&_1
+		background: url("../img/foot-inst-item1-bg.png")
+
+	&_2
+		background: url("../img/foot-inst-item2-bg.png")
+
+	&_3
+		background: url("../img/foot-inst-item3-bg.png")
+
+	&_4
+		background: url("../img/foot-inst-item4-bg.png")
+
+	&_5
+		background: url("../img/foot-inst-item5-bg.png")
+
+	&_6
+		background: url("../img/foot-inst-item6-bg.png")
+
+	&_7
+		background: url("../img/foot-inst-item7-bg.png")
+
+	&_8
+		background: url("../img/foot-inst-item8-bg.png")
+
+	&_9
+		background: url("../img/foot-inst-item9-bg.png")
+
+.footer-inst__more
+	font: 0.875em 'roboto_light', sans-serif
+	color: #777777
+	font-style: italic
+/*..end_mogo..*/
+
+
+/*copyright*/
+.footer-copiright
+	font-family: 'montserrat_regular', sans-serif
+	font-size: 0.875em
+	color: #333333
+	text-align: center
+	
+.red-copyright
+	color: #f4a4a4
+/*end_copyright*/
+/*........end_footer..........*/

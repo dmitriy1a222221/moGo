@@ -1,41 +1,78 @@
 
 class Talk {
-    constructor(block, arrow, descriptionBlock) {
-        block.addEventListener('click', () => {
-            //this.defineProperty
-
-            if(this.flag === false) {
-                this.flag = true;
-                arrow.style.cssText = 'transform: rotate(180deg)';
-                descriptionBlock.style.cssText = 'display: block';
-
-
-            } else {
-                this.flag = false;
-                arrow.style.cssText = 'transform: rotate(0)';
-                descriptionBlock.style.cssText = 'display: none';
-            }
-            console.log(this.flag);
-
+    constructor(items) {
+        this.items = document.querySelectorAll(`.${items}`);
+        console.log();
+    }
+    logicAccordion() {
+        this.items.forEach(elem => {
+            elem.addEventListener('click', () => {
+                this.items.forEach(elem => {
+                    elem.classList.remove('active');
+                });
+                elem.classList.toggle('active')
+            })
         });
     }
 }
+document.addEventListener('DOMContentLoaded', () => {
+    let talk = new Talk('our-talk__item');
+    talk.logicAccordion();
+});
 
-let block1 = document.querySelectorAll('.our-talk__item')[0];
-let arrow1 = document.querySelectorAll('.our-talk__item_arrow')[0];
-let descriptionBlock1 = document.querySelectorAll('.our-talk__description-text')[0];
 
-let talk1 = new Talk(block1, arrow1, descriptionBlock1);
 
-let block2 = document.querySelectorAll('.our-talk__item')[1];
-let arrow2 = document.querySelectorAll('.our-talk__item_arrow')[1];
-let descriptionBlock2 = document.querySelectorAll('.our-talk__description-text')[1];
+class Slider {
+    constructor(sliderWrapItem, sliderItem, arrowPrev, arrowNext){
+        this.btnPrev = document.querySelector(`.${arrowPrev}`),
+        this.btnNext = document.querySelector(`.${arrowNext}`),
+        this.wrapSlide = document.querySelector(`.${sliderWrapItem}`),
+        this.slideItem = document.querySelectorAll(`.${sliderItem}`),
+        this.lengthAllItem = this.slideItem.length,
+        this.sliderItemWidth = Number(100 / this.lengthAllItem),
+        this.wrapSlideWidth = Number(this.lengthAllItem * 100),
+        this.arrPush = [],
+        this.wrapSlide.style.width = `${this.wrapSlideWidth}%`;
+        this.slideItem.forEach(item => {
+            item.style.width = `${this.sliderItemWidth}%`;
+        });
+        for (let i = this.sliderItemWidth; i <= 100 ; i += this.sliderItemWidth) {
+            this.arrPush.push(Number(i))
+        }
+    };
 
-let talk2 = new Talk(block2, arrow2, descriptionBlock2);
+    sliderLogic() {
+        let position = [0, ...this.arrPush],
+            delEl = position.pop(),
+            counter = 0;
+        let set = (pos) => {
+            this.wrapSlide.style.transform = `translate(-${pos}%)`;
+        };
+        let init = () => {
+            set(position[counter]);
+        };
+        let prev = () => {
+            counter--;
+            if(counter < 0 ) counter = position.length-1;
+            set(position[counter]);
+        };
+        let next = () => {
+            counter++;
+            if(counter === position.length) counter = 0;
+            set(position[counter]);
+        };
 
-let block3 = document.querySelectorAll('.our-talk__item')[2];
-let arrow3 = document.querySelectorAll('.our-talk__item_arrow')[2];
-let descriptionBlock3 = document.querySelectorAll('.our-talk__description-text')[2];
+        this.btnPrev.addEventListener('click', prev);
+        this.btnNext.addEventListener('click', next);
 
-let talk3 = new Talk(block3, arrow3, descriptionBlock3);
+        return init();
+    }
+}
 
+document.addEventListener('DOMContentLoaded', () => {
+    let slider1 = new Slider('slider-wrap-item', 'slider-item', 'arrow-prev__wrap', 'arrow-next__wrap');
+    slider1.sliderLogic();
+
+    let slider2 = new Slider('slider-wrap-item-work', 'slider-item-work', 'arrow-prev__wrap-work', 'arrow-next__wrap-work');
+    slider2.sliderLogic();
+});
